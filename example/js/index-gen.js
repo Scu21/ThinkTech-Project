@@ -69883,7 +69883,7 @@
 
 			hideLink: true,
 
-			template: _.template('<img src="sdg.png" alt="Girl in a jacket" width="350" height="230">'/*'<div class="controls-container"><ul>' + '<li><button class="btn btn-default"><img src="C:/Users/rohan/Desktop/np.jpg" alt="Girl in a jacket" width="50" height="70">No P</button></li>' + '<li><button class="btn btn-default"><i class="fa fa-times"></i>Button 2</button></li>' + '<li><button class="btn btn-default"><i class="fa fa-trash"></i>Button 3</button></li>' + '</ul></div>'*/),
+			template: _.template('<img src="sdg.png" alt="Girl in a jacket" width="311" height="322">'/*'<div class="controls-container"><ul>' + '<li><button class="btn btn-default"><img src="C:/Users/rohan/Desktop/np.jpg" alt="Girl in a jacket" width="50" height="70">No P</button></li>' + '<li><button class="btn btn-default"><i class="fa fa-times"></i>Button 2</button></li>' + '<li><button class="btn btn-default"><i class="fa fa-trash"></i>Button 3</button></li>' + '</ul></div>'*/),
 
 			render: function render() {
 				Dashboard.render.widget(this.name, this.shell.tpl);
@@ -69891,7 +69891,7 @@
 				this.fetch();
 
 				$('#widget-' + this.shell.id).css({
-					'height': '240px',
+					'height': '350px',
 					'margin-bottom': '10px',
 					'overflow-x': 'hidden',
 					'width': '100%'
@@ -69923,7 +69923,7 @@
 
 			hideLink: true,
 
-			template: _.template('<div class="date-container">B'),
+			template: _.template('<center><div id="gauge2" class="gauge-container two"></div></center>'),
 
 			render: function render() {
 				Dashboard.render.widget(this.name, this.shell.tpl);
@@ -69946,7 +69946,7 @@
 				today = mm + '/' + dd + '/' + yyyy;
 
 				$('#widget-' + this.shell.id).css({
-					'height': '140px',
+					'height': '130px',
 					'margin-bottom': '10px',
 					'overflow-x': 'hidden',
 					'width': '100%'
@@ -69979,19 +69979,19 @@
 		var extended = {
 			name: 'form',
 			title: 'Impact Map',
-			size: 'medium',
+			size: 'assetsize',
 			widgetId: id,
 
 			hideLink: true,
 
-			template: _.template('<img src="Map.png" alt="Girl in a jacket" width="650" height="510">'),
+			template: _.template('<img src="Map2.png" alt="Girl in a jacket" width="619" height="265">'),
 
 			render: function render() {
 				Dashboard.render.widget(this.name, this.shell.tpl);
 				this.fetch();
 
 				$('#widget-' + this.shell.id).css({
-					'height': '540px',
+					'height': '270px',
 					'margin-bottom': '10px',
 					'overflow-x': 'hidden',
 					'width': '100%'
@@ -70059,7 +70059,7 @@
 				this.fetch();
 
 				$('#widget-' + this.shell.id).css({
-					'height': '240px',
+					'height': '300px',
 					'margin-bottom': '10px',
 					'overflow-x': 'hidden',
 					'width': '100%'
@@ -70092,10 +70092,10 @@
 		var extended = {
 			name: 'misc',
 			title: 'Performance',
-			size: 'medium',
+			size: 'Psize',
 			widgetId: id,
 
-			template: _.template('<center><table><tr><td><div id="gauge0" class="gauge-container"></div></td><td><div id="gauge1" class="gauge-container one"></div></td><td><div id="gauge2" class="gauge-container two"></div></td></tr><tr><td><div id="gauge3" class="gauge-container three"></div></td><td><div id="gauge4" class="gauge-container four"></div></td><td><div id="gauge5" class="gauge-container five"></td></tr><tr><td></div><div id="gauge6" class="gauge-container six"></div></td></tr></table</center>'),
+			template: _.template('<div id="gauge0" class="gauge-container"></div><div id="gauge1" class="gauge-container one"></div><div id="gauge2" class="gauge-container two"></div><div id="gauge3" class="gauge-container three"></div><div id="gauge4" class="gauge-container four"></div><div id="gauge5" class="gauge-container five"></div><div id="gauge6" class="gauge-container six">'/*'<center><table><tr><td><div id="gauge0" class="gauge-container"></div></td><td><div id="gauge1" class="gauge-container one"></div></td><td><div id="gauge2" class="gauge-container two"></div></td></tr><tr><td><div id="gauge3" class="gauge-container three"></div></td><td><div id="gauge4" class="gauge-container four"></div></td><td><div id="gauge5" class="gauge-container five"></td></tr><tr><td></div><div id="gauge6" class="gauge-container six"></div></td></tr></table</center>'*/),
 			
 			render: function render() {
 				Dashboard.render.widget(this.name, this.shell.tpl);
@@ -70215,7 +70215,7 @@
 				this.fetch();
 
 				$('#widget-' + this.shell.id).css({
-					'height': '140px',
+					'height': '130px',
 					'margin-bottom': '10px',
 					'overflow-x': 'hidden',
 					'width': '100%'
@@ -70445,7 +70445,14 @@
 					opts.mediumColumn = 8;
 					opts.smallColumn = 8;
 
-					break;				
+					break;
+
+				case 'psize':
+					opts.largeColumn = 3;
+					opts.mediumColumn = 3;
+					opts.smallColumn = 3;
+
+					break;					
 				}
 
 			return {
